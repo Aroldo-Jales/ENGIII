@@ -1,7 +1,6 @@
-// FAIL FIRST
+## FAIL FIRST
 
-//ANTES
-//-----------------------------------------------------------------------------------//
+### ANTES
 ```
 public boolean baixar(int qtd){
     if (this.quantidade - qtd < qtdMin){
@@ -14,8 +13,7 @@ public boolean baixar(int qtd){
     }
 }
 ```
-//DEPOIS
-//-----------------------------------------------------------------------------------//
+### DEPOIS
 ```
 public boolean baixar(int qtd){
     if (this.quantidade - qtd < qtdMin){
@@ -28,8 +26,7 @@ public boolean baixar(int qtd){
 }
 ```
 
-// FAIL FIRST
-//-----------------------------------------------------------------------------------//
+## FAIL FIRST
 ```
 public void inserir(Conta c){
     if (indice >= contas.length) {
@@ -39,10 +36,8 @@ public void inserir(Conta c){
     indice+=1;
 }
 ```
-//-----------------------------------------------------------------------------------//
 
-// FAIL FIRST 
-//-----------------------------------------------------------------------------------//
+## FAIL FIRST
 ```
 public Conta consultar(String numero) {
     Conta c = null;
@@ -60,12 +55,10 @@ public Conta consultar(String numero) {
     return c;
 }
 ```
-//-----------------------------------------------------------------------------------//
 
+## TELL DONT ASK
 
-//TELL DONT ASK
-//ANTES 
-//-----------------------------------------------------------------------------------//
+### ANTES 
 ```
 let j1 = new Jogo();
     
@@ -84,8 +77,8 @@ for (let i = 0 ; i < 3; i++) {
     j1.avaliarbatalha()
 }
 ```
-//DEPOIS
-//-----------------------------------------------------------------------------------//
+
+## DEPOIS
 ```
 rodada(jg: Jogo): void {
     let size = jg.getArray().length;
@@ -107,11 +100,9 @@ batalha(jg: Jogo, j: number) {
 let j1 = new Jogo();
 batalha(j1,3);
 ```
-//-----------------------------------------------------------------------------------//
 
 
-//TELL DONT ASK
-//-----------------------------------------------------------------------------------//
+## TELL DONT ASK
 ```
 export class CovidCasos {
     private media_quartoze: number;
@@ -148,8 +139,7 @@ export class CovidCasos {
     }
 }
 ```
-// TESTE
-//-----------------------------------------------------------------------------------//
+### ARQUIVO DE TESTE
 ```
 import {CovidCasos} from './01_questao';
 
@@ -161,4 +151,3 @@ console.log(cov1.Resultado());
 console.log(cov2.Resultado());
 console.log(cov3.Resultado());
 ```
-//-----------------------------------------------------------------------------------//
