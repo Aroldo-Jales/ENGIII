@@ -1,6 +1,6 @@
 ## FAIL FIRST
 
-### ANTES
+#### Antes
 ```java
 public boolean baixar(int qtd){
     if (this.quantidade - qtd < qtdMin){
@@ -13,8 +13,8 @@ public boolean baixar(int qtd){
     }
 }
 ```
-### DEPOIS
-```
+#### Depois
+```java
 public boolean baixar(int qtd){
     if (this.quantidade - qtd < qtdMin){
         System.out.println("Operação não realizada.");
@@ -27,7 +27,7 @@ public boolean baixar(int qtd){
 ```
 
 ## FAIL FIRST
-```
+```java
 public void inserir(Conta c){
     if (indice >= contas.length) {
         throw new AplicacaoException("Número máximo de contas atingido (50).");
@@ -38,7 +38,7 @@ public void inserir(Conta c){
 ```
 
 ## FAIL FIRST
-```
+```java
 public Conta consultar(String numero) {
     Conta c = null;
 
@@ -58,8 +58,8 @@ public Conta consultar(String numero) {
 
 ## TELL DONT ASK
 
-### ANTES 
-```
+#### Antes
+```typescript
 let j1 = new Jogo();
     
 function rodada(): void {
@@ -78,8 +78,8 @@ for (let i = 0 ; i < 3; i++) {
 }
 ```
 
-## DEPOIS
-```
+#### Depois
+```typescript
 rodada(jg: Jogo): void {
     let size = jg.getArray().length;
     for (let i = 1; i < size+1; i ++) {
@@ -103,7 +103,7 @@ batalha(j1,3);
 
 
 ## TELL DONT ASK
-```
+```typescript
 export class CovidCasos {
     private media_quartoze: number;
     private media_hoje: number;
@@ -140,7 +140,7 @@ export class CovidCasos {
 }
 ```
 ### ARQUIVO DE TESTE
-```
+```typescript
 import {CovidCasos} from './01_questao';
 
 let cov1 = new CovidCasos(400,500);
