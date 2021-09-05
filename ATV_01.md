@@ -2,6 +2,7 @@
 
 //ANTES
 //-----------------------------------------------------------------------------------//
+```
 public boolean baixar(int qtd){
     if (this.quantidade - qtd < qtdMin){
         System.out.println("Operação não realizada.");
@@ -12,9 +13,10 @@ public boolean baixar(int qtd){
         return true;
     }
 }
-
+```
 //DEPOIS
 //-----------------------------------------------------------------------------------//
+```
 public boolean baixar(int qtd){
     if (this.quantidade - qtd < qtdMin){
         System.out.println("Operação não realizada.");
@@ -24,9 +26,11 @@ public boolean baixar(int qtd){
     this.quantidade =  this.quantidade - qtd; 
     return true;
 }
+```
 
 // FAIL FIRST
 //-----------------------------------------------------------------------------------//
+```
 public void inserir(Conta c){
     if (indice >= contas.length) {
         throw new AplicacaoException("Número máximo de contas atingido (50).");
@@ -34,9 +38,12 @@ public void inserir(Conta c){
     contas[indice] = c;
     indice+=1;
 }
+```
 //-----------------------------------------------------------------------------------//
+
 // FAIL FIRST 
 //-----------------------------------------------------------------------------------//
+```
 public Conta consultar(String numero) {
     Conta c = null;
 
@@ -52,11 +59,14 @@ public Conta consultar(String numero) {
     }
     return c;
 }
+```
 //-----------------------------------------------------------------------------------//
+
 
 //TELL DONT ASK
 //ANTES 
 //-----------------------------------------------------------------------------------//
+```
 let j1 = new Jogo();
     
 function rodada(): void {
@@ -73,10 +83,10 @@ for (let i = 0 ; i < 3; i++) {
     rodada()
     j1.avaliarbatalha()
 }
-
+```
 //DEPOIS
 //-----------------------------------------------------------------------------------//
-
+```
 rodada(jg: Jogo): void {
     let size = jg.getArray().length;
     for (let i = 1; i < size+1; i ++) {
@@ -96,11 +106,13 @@ batalha(jg: Jogo, j: number) {
 
 let j1 = new Jogo();
 batalha(j1,3);
+```
 //-----------------------------------------------------------------------------------//
 
 
 //TELL DONT ASK
 //-----------------------------------------------------------------------------------//
+```
 export class CovidCasos {
     private media_quartoze: number;
     private media_hoje: number;
@@ -135,9 +147,10 @@ export class CovidCasos {
         return variacao.toFixed(2) + "%" + ", " + resultado;
     }
 }
-
+```
 // TESTE
 //-----------------------------------------------------------------------------------//
+```
 import {CovidCasos} from './01_questao';
 
 let cov1 = new CovidCasos(400,500);
@@ -147,4 +160,5 @@ let cov3 = new CovidCasos(400,340);
 console.log(cov1.Resultado());
 console.log(cov2.Resultado());
 console.log(cov3.Resultado());
+```
 //-----------------------------------------------------------------------------------//
